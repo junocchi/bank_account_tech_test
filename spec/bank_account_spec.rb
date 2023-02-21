@@ -29,8 +29,8 @@ RSpec.describe BankAccount do
     end
   end
 
-  context "when withdraw from account" do
-    it "updates current balance" do
+  context "if new transactions" do
+    it "formats the statement" do
       account = BankAccount.new
       account.deposit(250, Date.new(2023, 1, 15))
       expect(account.format_statement).to include("250.00")
