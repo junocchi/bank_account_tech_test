@@ -15,6 +15,20 @@ class BankAccount
       balance: @balance
     }
   end
+
+  def withdraw(amount, date)
+    if amount > @balance
+      fail "You don't have credit."
+    else
+      @balance -= amount
+      @transactions << { 
+        date: date, 
+        credit: nil,
+        debit: amount, 
+        balance: @balance
+      }
+    end
+  end
 end
 
 # account = BankAccount.new
