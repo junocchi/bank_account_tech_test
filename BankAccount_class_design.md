@@ -20,7 +20,7 @@ _Consider diagramming out the class and its methods._
 │ - initialize               │
 │ - deposit(amount)          │
 │ - withdraw(amount)         │
-│ - print_statement            │
+│ - print_statement          │
 │   => [transactions...]     │
 └───────────┬────────────────┘
             │
@@ -70,7 +70,11 @@ _Create examples of the method being called with particular arguments, and what 
 ```ruby
 # EXAMPLE
 
-#1 Print statment after paying into bank account
+#1 Updates current balance
+account = BankAccount.new
+account.deposit(1000, Date.new(2023, 1, 10)) # => to include :balance=>1000
+
+#2 Prints the statment after paying into bank account
 account = BankAccount.new
 account.deposit(1000, Date.new(2023, 1, 10))
 account.deposit(2000, Date.new(2023, 1, 13))
@@ -80,7 +84,7 @@ account.print_statement() # =>
 # 10/01/2023 || 1000.00 || || 1000.00
 
 
-#2 Print statment after withdrawing from bank account
+#3 Prints the statment after withdrawing from bank account
 account = BankAccount.new
 account.deposit(1000, Date.new(2023, 1, 10))
 account.deposit(2000, Date.new(2023, 1, 13))
@@ -91,7 +95,7 @@ account.print_statement() # =>
 # 13/01/2023 || 2000.00 || || 3000.00
 # 10/01/2023 || 1000.00 || || 1000.00
 
-#3 It fails when insufficient funds
+#4 It fails when insufficient funds
 account = BankAccount.new
 account.deposit(500, Date.new(2023, 1, 10))
 account.withdraw(700, Date.new(2023, 1, 14)) # => it fails
