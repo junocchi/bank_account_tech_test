@@ -14,9 +14,10 @@ As a user, I want to be able to print my bank statement
 * Data is kept in memory.
 
 ## 2. Design of the Class System
-```
+
 Initially, I considered the class with the methods initialize, deposit, withdraw and print_statement. However, once I started writing the tests, I realized that I would not be able to test some of the functionalities in print_statement and decided to add the format_statement method too.
 
+```
 ┌────────────────────────────┐
 │ BankAccount                │
 │ - initialize               │
@@ -63,7 +64,6 @@ date || credit || debit || balance
 ```
 
 ## 3. Testing and Dependencies
-
 
 We can run all of our tests at once with 'RSpec'.
 
