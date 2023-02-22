@@ -7,7 +7,7 @@ As a user, I want to be able to make deposits to my account (pay-in)
 As a user, I want to be able to remove funds from my account (withdrawal)
   It should store the transaction's date, amount and balance
 As a user, I want to be able to print my bank statement
-  It should return and print all transaction's dates, amounts and balances
+  It should return and print all transaction dates, amounts and balances
 
 
 * You should be able to interact with the code via a REPL like IRB.  (You don't need to implement a command line interface that takes input from STDIN.)
